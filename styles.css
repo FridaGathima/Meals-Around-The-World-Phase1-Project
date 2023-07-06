@@ -71,7 +71,21 @@ body h3 {
 #recipedetail {
     list-style: none;
 }
-/* #recipes button{
-    color: aqua;
 
-} */
+#socialmediaicons {
+    color: black;
+    font-size: x-large;
+}
+
+#socialmediaicons iconify-icon {
+    margin: 10px;
+}
+
+#footer a {
+    color: black;
+    float: left;
+    font-size: x-large;
+    font-weight: bolder;
+    width: 25%;
+    background-color: rgb(155, 159, 148);
+}
