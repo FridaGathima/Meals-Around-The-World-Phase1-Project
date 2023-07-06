@@ -1,21 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const allRecipes = document.getElementById('recipes')
-    //const likeBtn = document.getElementById('likeb')
-    //const recipeDetails = document.getElementById('recipedetail')
     const recipeIngredients = document.getElementById('ingredients')
     const recipeMeasurements = document.getElementById('measurements')
-    //const recipeFooter = document.getElementById('footer')
     const contactUss = document.getElementById('contactus')
     const newsLetterr = document.getElementById('newsletter')
-
-
-
-    // const corbaRecipe = document.getElementById('corba')
-    // const corbaIng = document.getElementById('corbaingredients')
-    // const burekRecipe = document.getElementById('burek')
-    // const burekIng = document.getElementById('burekingredients')
-    // const sushiRecipe = document.getElementById('sushi')
 
 
     function recipes() {
@@ -51,12 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         displayRecipeInstructions(dataitem)
                         displayRecipeMeasuremets(dataitem)
                     })
-
-
-
-                    // corbaTurkish(data)
-                    // burekCroatian (data)
-                    // sushiJapanese(data)
 
                 })
             })
@@ -219,11 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     )
 
-
-    // const submitNewsletter = document.createElement('button')
-    // submitNewsletter.innerText = 'Submit'
-    // newsLetterr.appendChild(submitNewsletter)
-
     newsLetterr.addEventListener('submit', (e) => {
         e.preventDefault()
         const username = document.getElementById('formname').value
@@ -234,123 +212,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(emailAddress)
     })
 
-}) //DOM content loaded
-
-
-
-// movieitemdetails.append(availableticsButton)
-// availableticsButton.addEventListener('click', () => {
-
-//     const availabletiks = document.getElementById('availabletickss')
-//     availabletiks.innerText = "Available tickets = " + (dataitem.capacity)--
-
-
-// function corbaTurkish(data) {
-
-//     const corbaImg = document.createElement('img')
-//     corbaImg.src = data.meals[0].strMealThumb
-//     corbaRecipe.appendChild(corbaImg)
-
-//     const corbaCountry = document.createElement('p')
-//     corbaCountry.innerText = 'Country : Turkey'//data.meals[0].strArea 
-//     corbaRecipe.appendChild(corbaCountry)
-
-//     const corbaName = document.createElement('p')
-//     corbaName.innerText = data.meals[0].strMeal
-//     corbaRecipe.appendChild(corbaName)
-
-//     corbaName.addEventListener('click', () => {
-//         corbaRecipeInstructions(data)
-//     } )
-
-// }
-
-
-// function corbaRecipeInstructions(data) {
-//     corbaIng.innerHTML = ""
-
-//     const corbaLentils = document.createElement('li')
-//     corbaLentils.innerText = data.meals[0].strIngredient1
-//     corbaIng.appendChild(corbaLentils)
-
-//     const corbaOnions = document.createElement('li')
-//     corbaOnions.innerText = data.meals[0].strIngredient2
-//     corbaIng.appendChild(corbaOnions)
-
-//     const corbaCarrots = document.createElement('li')
-//     corbaCarrots.innerText = data.meals[0].strIngredient3
-//     corbaIng.appendChild(corbaCarrots)
-
-//     const corbaTomato = document.createElement('li')
-//     corbaTomato.innerText = data.meals[0].strIngredient4
-//     corbaIng.appendChild(corbaTomato)
-
-//     const corbaCumin = document.createElement('li')
-//     corbaCumin.innerText = data.meals[0].strIngredient5
-//     corbaIng.appendChild(corbaCumin)
-
-//     const corbaInstructions = document.createElement('p')
-//     corbaInstructions.innerText = data.meals[0].strInstructions
-//     corbaIng.appendChild(corbaInstructions)
-
-// }
-
-// function burekCroatian (data) {
-//     const burekImg = document.createElement('img')
-//     burekImg.src = data.meals[1].strMealThumb
-//     burekRecipe.appendChild(burekImg)
-
-//     const burekCountry = document.createElement('p')
-//     burekCountry.innerText = 'Country : Croatia ' + '- ' + ' This is a ' + data.meals[1].strArea + ' dish'
-//     burekRecipe.appendChild(burekCountry)
-
-//     const burekName = document.createElement ('p')
-//     burekName.innerText = data.meals[1].strMeal
-//     burekRecipe.appendChild(burekName)
-
-//     burekName.addEventListener('click', () => {
-//         burekRecipeInstructions(data)
-//     })
-// }
-
-// function burekRecipeInstructions(data) {
-//     burekIng.innerHTML = ""
-
-//     const burekFilo = document.createElement('li')
-//     burekFilo.innerText = data.meals[1].strIngredient1
-//     burekIng.appendChild(burekFilo)
-
-//     const burekBeef = document.createElement('li')
-//     burekBeef.innerText = data.meals[1].strIngredient2
-//     burekIng.appendChild(burekBeef)
-
-//     const burekOnion = document.createElement('li')
-//     burekOnion.innerText = data.meals[1].strIngredient3
-//     burekIng.appendChild(burekOnion)
-
-//     const burekOil = document.createElement('li')
-//     burekOil.innerText = data.meals[1].strIngredient4
-//     burekIng.appendChild(burekOil)
-
-//     const burekSalt = document.createElement('li')
-//     burekSalt.innerText = data.meals[1].strIngredient5
-//     burekIng.appendChild(burekSalt)
-
-//     const burekInstructions = document.createElement('p')
-//     burekInstructions.innerText = data.meals[1].strInstructions
-//     burekIng.appendChild(burekInstructions)
-// }
-
-// function sushiJapanese(data) {
-//     const sushiImg = document.createElement('img')
-//     sushiImg.src = data.meals[2].strMealThumb
-//     sushiRecipe.appendChild(sushiImg)
-
-//     const sushiCountry = document.createElement('p')
-//     sushiCountry.innerText = 'Country : Japan'
-//     sushiRecipe.appendChild(sushiCountry)
-
-//     const sushiName = document.createElement('p')
-//     sushiName.innerText = data.meals[2].strMeal
-//     sushiRecipe.appendChild(sushiName)
-// }
+}) 
