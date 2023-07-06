@@ -1,8 +1,10 @@
 const allRecipes = document.getElementById('recipes')
+//const likeBtn = document.getElementById('likebutton')
 //const recipeDetails = document.getElementById('recipedetail')
 const recipeIngredients = document.getElementById('ingredients')
 const recipeMeasurements = document.getElementById('measurements')
-const recipeFooter = document.getElementById('footer')
+//const recipeFooter = document.getElementById('footer')
+const contactUss = document.getElementById('contactus')
 
 
 
@@ -23,12 +25,18 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
             recipImg.src = dataitem.strMealThumb
             allRecipes.appendChild(recipImg)
 
+            const likeButtonn = document.createElement('button')
+            likeButtonn.innerHTML = `
+            <iconify-icon icon="icon-park-outline:like"></iconify-icon>`
+            allRecipes.appendChild(likeButtonn)
+
+
             const recipeCountry = document.createElement('p')
             recipeCountry.innerText = 'Recipe Nationality : '+ '' + dataitem.strArea
             allRecipes.appendChild(recipeCountry)
 
             const recipeType = document.createElement('p')
-            recipeType.innerText = 'Recipe Type : ' + '' + dataitem.strCategory
+            recipeType.innerText = 'Recipe Type : ' + '' + dataitem.strCategory 
             allRecipes.appendChild(recipeType)
 
             const recipeName = document.createElement('p')
@@ -195,6 +203,21 @@ function displayRecipeMeasuremets(dataitem) {
 
 }
 
+const submitContactUs = document.createElement('button')
+submitContactUs.innerText = 'Submit'
+contactUss.appendChild(submitContactUs)
+
+submitContactUs.addEventListener('click', () => {
+    recipes()
+}
+)
+
+
+// movieitemdetails.append(availableticsButton)
+// availableticsButton.addEventListener('click', () => {
+
+//     const availabletiks = document.getElementById('availabletickss')
+//     availabletiks.innerText = "Available tickets = " + (dataitem.capacity)--
 
 
 // function corbaTurkish(data) {
