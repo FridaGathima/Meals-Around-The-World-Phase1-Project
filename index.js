@@ -1,4 +1,7 @@
 const allRecipes = document.getElementById('recipes')
+const recipeDetails = document.getElementById('recipedetail')
+const recipeIngredients = document.getElementById('recipeingredient')
+
 const corbaRecipe = document.getElementById('corba')
 const corbaIng = document.getElementById('corbaingredients')
 const burekRecipe = document.getElementById('burek')
@@ -18,11 +21,17 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
             recipeCountry.innerText = 'Recipe Nationality : '+ '' + dataitem.strArea
             allRecipes.appendChild(recipeCountry)
 
+            const recipeType = document.createElement('p')
+            recipeType.innerText = 'Recipe Type : ' + '' + dataitem.strCategory
+            allRecipes.appendChild(recipeType)
+
             const recipeName = document.createElement('p')
             recipeName.innerText = 'Recipe Name : '+ '' + dataitem.strMeal
             allRecipes.appendChild(recipeName)
 
-        
+            recipeName.addEventListener('click', () => {
+                displayRecipeInstructions(dataitem)
+            })
 
         // corbaTurkish(data)
         // burekCroatian (data)
@@ -30,6 +39,51 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
         
         })
     })
+
+
+function displayRecipeInstructions(dataitem){
+    recipeIngredients.innerHTML = ""
+
+    const ingredient1 = document.createElement('li')
+    ingredient1.innerText = dataitem.strIngredient1
+    recipeIngredients.appendChild(ingredient1)
+
+    const ingredient2 = document.createElement('li')
+    ingredient2.innerText = dataitem.strIngredient2
+    recipeIngredients.appendChild(ingredient2)
+
+    const ingredient3 = document.createElement('li')
+    ingredient3.innerText = dataitem.strIngredient3
+    recipeIngredients.appendChild(ingredient3)
+
+    const ingredient4 = document.createElement('li')
+    ingredient4.innerText = dataitem.strIngredient4
+    recipeIngredients.appendChild(ingredient4)
+
+    const ingredient5 = document.createElement('li')
+    ingredient5.innerText = dataitem.strIngredient5
+    recipeIngredients.appendChild(ingredient5)
+
+//     const ingredient6 = document.createElement('li')
+//     ingredient6.innerText = dataitem.strIngredient6
+//     recipeIngredients.appendChild(ingredient6)
+
+//     const ingredient7 = document.createElement('li')
+//     ingredient7.innerText = dataitem.strIngredient7
+//     recipeIngredients.appendChild(ingredient7)
+
+//     const ingredient8 = document.createElement('li')
+//     ingredient8.innerText = dataitem.strIngredient8
+//     recipeIngredients.appendChild(ingredient8)
+
+//     const ingredient9 = document.createElement('li')
+//     ingredient9.innerText = dataitem.strIngredient9
+//     recipeIngredients.appendChild(ingredient9)
+
+//     const ingredient10 = document.createElement('li')
+//     ingredient10.innerText = dataitem.strIngredient10
+//     recipeIngredients.appendChild(ingredient10)
+}
 
 // function corbaTurkish(data) {
 
