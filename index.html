@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Meals Around the World</h1>
+    <h1><em>Meals Around the World</em></h1>
     <h3><em>Exploring the world through cuisines</em></h3>
-    <nav>
+    <nav class="navbar">
         <ul id="navigationbar" ></ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Our History</a></li>
@@ -26,6 +26,7 @@
     </div>
     <div id="recipes">
        <h2>Recipes</h2> 
+       <!-- <div id="likeb"></div> -->
        <p>Let your journey to world cusines begin by clicking on any of the meal names below to get the full recipe details:</p>
        <div id="recipedetail">
             <!--div for recipedetails-->
@@ -49,20 +50,20 @@
     <div id="measurements"> 
     </div>
     <div id="forms">
-            <div id="contactus">
+            <form id="contactus">
                 <h3><em>We'd Love to Hear From You</em></h3>
                 <input type="text" placeholder="Name">
                 <input type="number" placeholder="Phone Number">
                 <input type="email" placeholder="Email Address">
-                <!--<input type="submit" placeholder="Submit"> -->
-            </div>
-            <div id="subscribe">
+                <!-- <input type="submit" placeholder="Submit"> -->
+            </form> 
+            <form id="newsletter">
                 <h3><em>Subscribe to Our Newsletter</em></h3>
-                <input type="text" placeholder="Name">
-                <input type="number" placeholder="Phone Number">
-                <input type="email" placeholder="Email Address">
-                <!--<input type="submit" placeholder="Submit"> -->
-            </div>
+                <input type="text" id="formname" placeholder="Name">
+                <input type="number" id="phonenumber" placeholder="Phone Number">
+                <input type="email" id="email" placeholder="Email Address">
+                <input type="submit" value="Submit">
+            </form>
 
     </div>
 
