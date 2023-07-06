@@ -1,7 +1,7 @@
 const allRecipes = document.getElementById('recipes')
 const recipeDetails = document.getElementById('recipedetail')
-const recipeIngredients = document.getElementById('recipeingredient')
-const recipeMeasurements = document.getElementById('recipemeasurement')
+const recipeIngredients = document.getElementById('ingredients')
+const recipeMeasurements = document.getElementById('measurements')
 
 
 // const corbaRecipe = document.getElementById('corba')
@@ -10,6 +10,8 @@ const recipeMeasurements = document.getElementById('recipemeasurement')
 // const burekIng = document.getElementById('burekingredients')
 // const sushiRecipe = document.getElementById('sushi')
 
+
+function recipes() {
 fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
     .then(response => response.json())
     .then((data) => {
@@ -42,7 +44,8 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
         
         })
     })
-
+}
+recipes()
 
 function displayRecipeInstructions(dataitem){
     recipeIngredients.innerHTML = ""
@@ -163,6 +166,30 @@ function displayRecipeMeasuremets(dataitem) {
     const measurement10 = document.createElement('li')
     measurement10.innerText = dataitem.strMeasure10
     recipeMeasurements.appendChild(measurement10)
+
+    const measurement11 = document.createElement('li')
+    measurement11.innerText = dataitem.strMeasure11
+    recipeMeasurements.appendChild(measurement11)
+
+    const measurement12 = document.createElement('li')
+    measurement12.innerText = dataitem.strMeasure12
+    recipeMeasurements.appendChild(measurement12)
+
+    const measurement13 = document.createElement('li')
+    measurement13.innerText = dataitem.strMeasure13
+    recipeMeasurements.appendChild(measurement13)
+
+    const measurement14 = document.createElement('li')
+    measurement14.innerText = dataitem.strMeasure14
+    recipeMeasurements.appendChild(measurement14)
+
+    const measurement15 = document.createElement('li')
+    measurement15.innerText = dataitem.strMeasure15
+    recipeMeasurements.appendChild(measurement15)
+
+    const measurement16 = document.createElement('li')
+    measurement16.innerText = dataitem.strMeasure16
+    recipeMeasurements.appendChild(measurement16)
 
 }
 
