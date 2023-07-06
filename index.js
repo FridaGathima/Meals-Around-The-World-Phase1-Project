@@ -3,110 +3,140 @@ const corbaRecipe = document.getElementById('corba')
 const corbaIng = document.getElementById('corbaingredients')
 const burekRecipe = document.getElementById('burek')
 const burekIng = document.getElementById('burekingredients')
+const sushiRecipe = document.getElementById('sushi')
 
 fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
     .then(response => response.json())
     .then((data) => {
         console.log(data.meals)
-      //  data.meals.forEach(dataitem => {
-        corbaTurkish(data)
-        burekCroatian (data)
+        data.meals.forEach(dataitem => {
+            const recipImg = document.createElement('img')
+            recipImg.src = dataitem.strMealThumb
+            allRecipes.appendChild(recipImg)
+
+            const recipeCountry = document.createElement('p')
+            recipeCountry.innerText = 'Recipe Nationality : '+ '' + dataitem.strArea
+            allRecipes.appendChild(recipeCountry)
+
+            const recipeName = document.createElement('p')
+            recipeName.innerText = 'Recipe Name : '+ '' + dataitem.strMeal
+            allRecipes.appendChild(recipeName)
+
         
-      //  })
+
+        // corbaTurkish(data)
+        // burekCroatian (data)
+        // sushiJapanese(data)
+        
+        })
     })
 
-function corbaTurkish(data) {
+// function corbaTurkish(data) {
 
-    const corbaImg = document.createElement('img')
-    corbaImg.src = data.meals[0].strMealThumb
-    corbaRecipe.appendChild(corbaImg)
+//     const corbaImg = document.createElement('img')
+//     corbaImg.src = data.meals[0].strMealThumb
+//     corbaRecipe.appendChild(corbaImg)
 
-    const corbaCountry = document.createElement('p')
-    corbaCountry.innerText = 'Country : Turkey'//data.meals[0].strArea 
-    corbaRecipe.appendChild(corbaCountry)
+//     const corbaCountry = document.createElement('p')
+//     corbaCountry.innerText = 'Country : Turkey'//data.meals[0].strArea 
+//     corbaRecipe.appendChild(corbaCountry)
 
-    const corbaName = document.createElement('p')
-    corbaName.innerText = data.meals[0].strMeal
-    corbaRecipe.appendChild(corbaName)
+//     const corbaName = document.createElement('p')
+//     corbaName.innerText = data.meals[0].strMeal
+//     corbaRecipe.appendChild(corbaName)
 
-    corbaName.addEventListener('click', () => {
-        corbaRecipeInstructions(data)
-    } )
+//     corbaName.addEventListener('click', () => {
+//         corbaRecipeInstructions(data)
+//     } )
 
-}
+// }
 
 
-function corbaRecipeInstructions(data) {
-    corbaIng.innerHTML = ""
+// function corbaRecipeInstructions(data) {
+//     corbaIng.innerHTML = ""
 
-    const corbaLentils = document.createElement('li')
-    corbaLentils.innerText = data.meals[0].strIngredient1
-    corbaIng.appendChild(corbaLentils)
+//     const corbaLentils = document.createElement('li')
+//     corbaLentils.innerText = data.meals[0].strIngredient1
+//     corbaIng.appendChild(corbaLentils)
 
-    const corbaOnions = document.createElement('li')
-    corbaOnions.innerText = data.meals[0].strIngredient2
-    corbaIng.appendChild(corbaOnions)
+//     const corbaOnions = document.createElement('li')
+//     corbaOnions.innerText = data.meals[0].strIngredient2
+//     corbaIng.appendChild(corbaOnions)
 
-    const corbaCarrots = document.createElement('li')
-    corbaCarrots.innerText = data.meals[0].strIngredient3
-    corbaIng.appendChild(corbaCarrots)
+//     const corbaCarrots = document.createElement('li')
+//     corbaCarrots.innerText = data.meals[0].strIngredient3
+//     corbaIng.appendChild(corbaCarrots)
 
-    const corbaTomato = document.createElement('li')
-    corbaTomato.innerText = data.meals[0].strIngredient4
-    corbaIng.appendChild(corbaTomato)
+//     const corbaTomato = document.createElement('li')
+//     corbaTomato.innerText = data.meals[0].strIngredient4
+//     corbaIng.appendChild(corbaTomato)
 
-    const corbaCumin = document.createElement('li')
-    corbaCumin.innerText = data.meals[0].strIngredient5
-    corbaIng.appendChild(corbaCumin)
+//     const corbaCumin = document.createElement('li')
+//     corbaCumin.innerText = data.meals[0].strIngredient5
+//     corbaIng.appendChild(corbaCumin)
 
-    const corbaInstructions = document.createElement('p')
-    corbaInstructions.innerText = data.meals[0].strInstructions
-    corbaIng.appendChild(corbaInstructions)
+//     const corbaInstructions = document.createElement('p')
+//     corbaInstructions.innerText = data.meals[0].strInstructions
+//     corbaIng.appendChild(corbaInstructions)
 
-}
+// }
 
-function burekCroatian (data) {
-    const burekImg = document.createElement('img')
-    burekImg.src = data.meals[1].strMealThumb
-    burekRecipe.appendChild(burekImg)
+// function burekCroatian (data) {
+//     const burekImg = document.createElement('img')
+//     burekImg.src = data.meals[1].strMealThumb
+//     burekRecipe.appendChild(burekImg)
 
-    const burekCountry = document.createElement('p')
-    burekCountry.innerText = 'Country : Croatia ' + '- ' + ' This is a ' + data.meals[1].strArea + ' dish'
-    burekRecipe.appendChild(burekCountry)
+//     const burekCountry = document.createElement('p')
+//     burekCountry.innerText = 'Country : Croatia ' + '- ' + ' This is a ' + data.meals[1].strArea + ' dish'
+//     burekRecipe.appendChild(burekCountry)
 
-    const burekName = document.createElement ('p')
-    burekName.innerText = data.meals[1].strMeal
-    burekRecipe.appendChild(burekName)
+//     const burekName = document.createElement ('p')
+//     burekName.innerText = data.meals[1].strMeal
+//     burekRecipe.appendChild(burekName)
 
-    burekName.addEventListener('click', () => {
-        burekRecipeInstructions(data)
-    })
-}
+//     burekName.addEventListener('click', () => {
+//         burekRecipeInstructions(data)
+//     })
+// }
 
-function burekRecipeInstructions(data) {
-    burekIng.innerHTML = ""
+// function burekRecipeInstructions(data) {
+//     burekIng.innerHTML = ""
 
-    const burekFilo = document.createElement('li')
-    burekFilo.innerText = data.meals[1].strIngredient1
-    burekIng.appendChild(burekFilo)
+//     const burekFilo = document.createElement('li')
+//     burekFilo.innerText = data.meals[1].strIngredient1
+//     burekIng.appendChild(burekFilo)
 
-    const burekBeef = document.createElement('li')
-    burekBeef.innerText = data.meals[1].strIngredient2
-    burekIng.appendChild(burekBeef)
+//     const burekBeef = document.createElement('li')
+//     burekBeef.innerText = data.meals[1].strIngredient2
+//     burekIng.appendChild(burekBeef)
 
-    const burekOnion = document.createElement('li')
-    burekOnion.innerText = data.meals[1].strIngredient3
-    burekIng.appendChild(burekOnion)
+//     const burekOnion = document.createElement('li')
+//     burekOnion.innerText = data.meals[1].strIngredient3
+//     burekIng.appendChild(burekOnion)
 
-    const burekOil = document.createElement('li')
-    burekOil.innerText = data.meals[1].strIngredient4
-    burekIng.appendChild(burekOil)
+//     const burekOil = document.createElement('li')
+//     burekOil.innerText = data.meals[1].strIngredient4
+//     burekIng.appendChild(burekOil)
 
-    const burekSalt = document.createElement('li')
-    burekSalt.innerText = data.meals[1].strIngredient5
-    burekIng.appendChild(burekSalt)
+//     const burekSalt = document.createElement('li')
+//     burekSalt.innerText = data.meals[1].strIngredient5
+//     burekIng.appendChild(burekSalt)
 
-    const burekInstructions = document.createElement('p')
-    burekInstructions.innerText = data.meals[1].strInstructions
-    burekIng.appendChild(burekInstructions)
-}
+//     const burekInstructions = document.createElement('p')
+//     burekInstructions.innerText = data.meals[1].strInstructions
+//     burekIng.appendChild(burekInstructions)
+// }
+
+// function sushiJapanese(data) {
+//     const sushiImg = document.createElement('img')
+//     sushiImg.src = data.meals[2].strMealThumb
+//     sushiRecipe.appendChild(sushiImg)
+
+//     const sushiCountry = document.createElement('p')
+//     sushiCountry.innerText = 'Country : Japan'
+//     sushiRecipe.appendChild(sushiCountry)
+
+//     const sushiName = document.createElement('p')
+//     sushiName.innerText = data.meals[2].strMeal
+//     sushiRecipe.appendChild(sushiName)
+// }
