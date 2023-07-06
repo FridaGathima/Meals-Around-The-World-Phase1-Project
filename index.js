@@ -128,21 +128,21 @@ function displayRecipeMeasuremets(dataitem) {
     measurement1.innerText = dataitem.strMeasure1
     recipeMeasurements.appendChild(measurement1)
 
-    // const measurement2 = document.createElement('li')
-    // measurement2.innerText = dataitem.strMeasure2
-    // recipeMeasurements.appendChild(measurement2)
+    const measurement2 = document.createElement('li')
+    measurement2.innerText = dataitem.strMeasure2
+    recipeMeasurements.appendChild(measurement2)
 
-    // const measurement3 = document.createElement('li')
-    // measurement3.innerText = dataitem.strMeasure3
-    // recipeMeasurements.appendChild(measurement3)
+    const measurement3 = document.createElement('li')
+    measurement3.innerText = dataitem.strMeasure3
+    recipeMeasurements.appendChild(measurement3)
 
-    // const measurement4 = document.createElement('li')
-    // measurement4.innerText = dataitem.strMeasure4
-    // recipeMeasurements.appendChild(measurement4)
+    const measurement4 = document.createElement('li')
+    measurement4.innerText = dataitem.strMeasure4
+    recipeMeasurements.appendChild(measurement4)
 
-    // const measurement5 = document.createElement('li')
-    // measurement5.innerText = dataitem.strMeasure5
-    // recipeMeasurements.appendChild(measurement5)
+    const measurement5 = document.createElement('li')
+    measurement5.innerText = dataitem.strMeasure5
+    recipeMeasurements.appendChild(measurement5)
 
 }
 
