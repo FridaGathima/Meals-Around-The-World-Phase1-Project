@@ -1,7 +1,5 @@
 body {
    background-color: rgb(227, 227, 205);
-
-
 }
 
 h1 {
@@ -32,6 +30,7 @@ body h3 {
     display: block;
     
 }
+
 .navbar li:hover {
     background-color: chocolate;
 }
@@ -55,16 +54,12 @@ body h3 {
     flex-flow: wrap;
     flex-direction: row;
     
-    
-
 }
-
 
 #recipes p {
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
-    
     
 }
 
@@ -89,3 +84,11 @@ body h3 {
     width: 25%;
     background-color: rgb(155, 159, 148);
 }
+
+#recipes {
+    overflow: auto;
+    margin: 5px;
+    padding: 15px;
+
+}
+

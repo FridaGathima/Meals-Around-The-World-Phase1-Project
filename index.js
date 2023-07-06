@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactUss = document.getElementById('contactus')
     const newsLetterr = document.getElementById('newsletter')
 
-
     function recipes() {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
             .then(response => response.json())
@@ -19,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const likeButtonn = document.createElement('button')
                     likeButtonn.innerHTML = `
-            <iconify-icon icon="icon-park-outline:like"></iconify-icon>
-            `
+                        <iconify-icon icon="icon-park-outline:like"></iconify-icon>
+                        `
                     allRecipes.appendChild(likeButtonn)
 
 
@@ -197,7 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
     submitContactUs.innerText = 'Submit'
     contactUss.appendChild(submitContactUs)
 
-    submitContactUs.addEventListener('click', () => {
+    submitContactUs.addEventListener('click', (e) => {
+        e.preventDefault()
         recipes()
     }
     )
