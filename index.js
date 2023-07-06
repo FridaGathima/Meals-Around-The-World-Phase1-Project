@@ -224,15 +224,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // submitNewsletter.innerText = 'Submit'
     // newsLetterr.appendChild(submitNewsletter)
 
-    // newsLetterr.addEventListener('submit', (e) => {
-    //     e.preventDefault()
-    //     const username = document.getElementById('formname').value
-    //     console.log(username)
-    //     const phoneNumberr = document.getElementById('phonenumber').value
-    //     console.log(phoneNumberr)
-    //     const emailAddress = document.getElementById('email').value
-    //     console.log(emailAddress)
-    // })
+    newsLetterr.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const username = document.getElementById('formname').value
+        console.log(username)
+        const phoneNumberr = document.getElementById('phonenumber').value
+        console.log(phoneNumberr)
+        const emailAddress = document.getElementById('email').value
+        console.log(emailAddress)
+    })
 
 }) //DOM content loaded
 
