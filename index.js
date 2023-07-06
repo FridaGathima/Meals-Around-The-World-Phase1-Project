@@ -64,25 +64,25 @@ function displayRecipeInstructions(dataitem){
     ingredient5.innerText = dataitem.strIngredient5
     recipeIngredients.appendChild(ingredient5)
 
-//     const ingredient6 = document.createElement('li')
-//     ingredient6.innerText = dataitem.strIngredient6
-//     recipeIngredients.appendChild(ingredient6)
+    const ingredient6 = document.createElement('li')
+    ingredient6.innerText = dataitem.strIngredient6
+    recipeIngredients.appendChild(ingredient6)
 
-//     const ingredient7 = document.createElement('li')
-//     ingredient7.innerText = dataitem.strIngredient7
-//     recipeIngredients.appendChild(ingredient7)
+    const ingredient7 = document.createElement('li')
+    ingredient7.innerText = dataitem.strIngredient7
+    recipeIngredients.appendChild(ingredient7)
 
-//     const ingredient8 = document.createElement('li')
-//     ingredient8.innerText = dataitem.strIngredient8
-//     recipeIngredients.appendChild(ingredient8)
+    const ingredient8 = document.createElement('li')
+    ingredient8.innerText = dataitem.strIngredient8
+    recipeIngredients.appendChild(ingredient8)
 
-//     const ingredient9 = document.createElement('li')
-//     ingredient9.innerText = dataitem.strIngredient9
-//     recipeIngredients.appendChild(ingredient9)
+    const ingredient9 = document.createElement('li')
+    ingredient9.innerText = dataitem.strIngredient9
+    recipeIngredients.appendChild(ingredient9)
 
-//     const ingredient10 = document.createElement('li')
-//     ingredient10.innerText = dataitem.strIngredient10
-//     recipeIngredients.appendChild(ingredient10)
+    const ingredient10 = document.createElement('li')
+    ingredient10.innerText = dataitem.strIngredient10
+    recipeIngredients.appendChild(ingredient10)
 }
 
 // function corbaTurkish(data) {
