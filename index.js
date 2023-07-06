@@ -1,7 +1,9 @@
 const allRecipes = document.getElementById('recipes')
-const recipeDetails = document.getElementById('recipedetail')
+//const recipeDetails = document.getElementById('recipedetail')
 const recipeIngredients = document.getElementById('ingredients')
 const recipeMeasurements = document.getElementById('measurements')
+const recipeFooter = document.getElementById('footer')
+
 
 
 // const corbaRecipe = document.getElementById('corba')
@@ -192,6 +194,8 @@ function displayRecipeMeasuremets(dataitem) {
     recipeMeasurements.appendChild(measurement16)
 
 }
+
+
 
 // function corbaTurkish(data) {
 
