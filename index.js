@@ -1,12 +1,14 @@
 const allRecipes = document.getElementById('recipes')
 const recipeDetails = document.getElementById('recipedetail')
 const recipeIngredients = document.getElementById('recipeingredient')
+const recipeMeasurements = document.getElementById('recipemeasurement')
 
-const corbaRecipe = document.getElementById('corba')
-const corbaIng = document.getElementById('corbaingredients')
-const burekRecipe = document.getElementById('burek')
-const burekIng = document.getElementById('burekingredients')
-const sushiRecipe = document.getElementById('sushi')
+
+// const corbaRecipe = document.getElementById('corba')
+// const corbaIng = document.getElementById('corbaingredients')
+// const burekRecipe = document.getElementById('burek')
+// const burekIng = document.getElementById('burekingredients')
+// const sushiRecipe = document.getElementById('sushi')
 
 fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
     .then(response => response.json())
@@ -83,6 +85,30 @@ function displayRecipeInstructions(dataitem){
     const ingredient10 = document.createElement('li')
     ingredient10.innerText = dataitem.strIngredient10
     recipeIngredients.appendChild(ingredient10)
+
+    const ingredient11 = document.createElement('li')
+    ingredient11.innerText = dataitem.strIngredient11
+    recipeIngredients.appendChild(ingredient11)
+
+    const ingredient12 = document.createElement('li')
+    ingredient12.innerText = dataitem.strIngredient12
+    recipeIngredients.appendChild(ingredient12)
+
+    const ingredient13 = document.createElement('li')
+    ingredient13.innerText = dataitem.strIngredient13
+    recipeIngredients.appendChild(ingredient13)
+
+    const ingredient14 = document.createElement('li')
+    ingredient14.innerText = dataitem.strIngredient14
+    recipeIngredients.appendChild(ingredient14)
+
+    const ingredient15 = document.createElement('li')
+    ingredient15.innerText = dataitem.strIngredient15
+    recipeIngredients.appendChild(ingredient1)
+
+    const ingredient16 = document.createElement('li')
+    ingredient1.innerText = dataitem.strIngredient16
+    recipeIngredients.appendChild(ingredient16)
 }
 
 // function corbaTurkish(data) {
