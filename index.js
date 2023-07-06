@@ -33,6 +33,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
 
             recipeName.addEventListener('click', () => {
                 displayRecipeInstructions(dataitem)
+                displayRecipeMeasuremets(dataitem)
             })
 
         // corbaTurkish(data)
@@ -45,6 +46,10 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
 
 function displayRecipeInstructions(dataitem){
     recipeIngredients.innerHTML = ""
+
+    const ingredientIntro = document.createElement('p')
+    ingredientIntro.innerText = 'The ingredients you will need are: '
+    recipeIngredients.appendChild(ingredientIntro)
 
     const ingredient1 = document.createElement('li')
     ingredient1.innerText = dataitem.strIngredient1
@@ -109,6 +114,36 @@ function displayRecipeInstructions(dataitem){
     const ingredient16 = document.createElement('li')
     ingredient1.innerText = dataitem.strIngredient16
     recipeIngredients.appendChild(ingredient16)
+
+}
+
+function displayRecipeMeasuremets(dataitem) {
+    recipeMeasurements.innerHTML = ""
+
+    const measurementIntro = document.createElement('p')
+    measurementIntro.innerText = 'The measurements are as follows: '
+    recipeMeasurements.appendChild(measurementIntro) 
+
+    const measurement1 = document.createElement('li')
+    measurement1.innerText = dataitem.strMeasure1
+    recipeMeasurements.appendChild(measurement1)
+
+    // const measurement2 = document.createElement('li')
+    // measurement2.innerText = dataitem.strMeasure2
+    // recipeMeasurements.appendChild(measurement2)
+
+    // const measurement3 = document.createElement('li')
+    // measurement3.innerText = dataitem.strMeasure3
+    // recipeMeasurements.appendChild(measurement3)
+
+    // const measurement4 = document.createElement('li')
+    // measurement4.innerText = dataitem.strMeasure4
+    // recipeMeasurements.appendChild(measurement4)
+
+    // const measurement5 = document.createElement('li')
+    // measurement5.innerText = dataitem.strMeasure5
+    // recipeMeasurements.appendChild(measurement5)
+
 }
 
 // function corbaTurkish(data) {
