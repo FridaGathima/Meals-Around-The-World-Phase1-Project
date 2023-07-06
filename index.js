@@ -144,6 +144,26 @@ function displayRecipeMeasuremets(dataitem) {
     measurement5.innerText = dataitem.strMeasure5
     recipeMeasurements.appendChild(measurement5)
 
+    const measurement6 = document.createElement('li')
+    measurement6.innerText = dataitem.strMeasure6
+    recipeMeasurements.appendChild(measurement6)
+
+    const measurement7 = document.createElement('li')
+    measurement7.innerText = dataitem.strMeasure7
+    recipeMeasurements.appendChild(measurement7)
+
+    const measurement8 = document.createElement('li')
+    measurement8.innerText = dataitem.strMeasure8
+    recipeMeasurements.appendChild(measurement8)
+
+    const measurement9 = document.createElement('li')
+    measurement9.innerText = dataitem.strMeasure9
+    recipeMeasurements.appendChild(measurement9)
+
+    const measurement10 = document.createElement('li')
+    measurement10.innerText = dataitem.strMeasure10
+    recipeMeasurements.appendChild(measurement10)
+
 }
 
 // function corbaTurkish(data) {
