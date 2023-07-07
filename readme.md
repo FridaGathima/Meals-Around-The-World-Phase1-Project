@@ -27,11 +27,11 @@ https://fridagathima.github.io/Meals-Around-The-World-Phase1-Project/
 
 **Screeshot of the Webpage**
 
-![homepage](<Screenshot from 2023-07-07 03-00-22.png>)
+![homepage](<Screenshot from 2023-07-07 10-55-43.png>)
 
-![middle of homepage](<Screenshot from 2023-07-07 03-00-42.png>)
 
-![bottom of homepage](<Screenshot from 2023-07-07 03-00-45.png>)
+![bottom of homepage](<Screenshot from 2023-07-07 10-55-50.png>)
+
 
 **Licence**
 
