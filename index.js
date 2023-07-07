@@ -38,7 +38,7 @@
                     recipeName.innerText = 'Recipe Name : ' + '' + dataitem.strMeal
                     allRecipes.appendChild(recipeName)
 
-                    recipeName.addEventListener('click', () => {
+                    recipeName.addEventListener('click', () => { //added an event listener to the Recipe Name
                         displayRecipeInstructions(dataitem)
                         displayRecipeMeasuremets(dataitem)
                     })
