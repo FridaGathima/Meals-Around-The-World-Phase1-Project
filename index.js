@@ -1,10 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => { //adding the DOMContentLoaded event listener to this JavaScript file
 
     const allRecipes = document.getElementById('recipes')
     const recipeIngredients = document.getElementById('ingredients')
     const recipeMeasurements = document.getElementById('measurements')
     const contactUss = document.getElementById('contactus')
     const newsLetterr = document.getElementById('newsletter')
+
+    // This function fetches the main details of the recipe i.e name, country of origin and its image. It is also where data was 
+    // fetched from the public API
 
     function recipes() {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s`)
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     recipes()
 
+    // this function displays the ingredients information as fetched from the API
 
     function displayRecipeInstructions(dataitem) {
         recipeIngredients.innerHTML = ""
@@ -119,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // this function displays the ingredient measurements information as fetched from the API
+
     function displayRecipeMeasuremets(dataitem) {
         recipeMeasurements.innerHTML = ""
 
@@ -192,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // adding the click event listener to contact us form
     const submitContactUs = document.createElement('button')
     submitContactUs.innerText = 'Submit'
     contactUss.appendChild(submitContactUs)
@@ -202,7 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     )
 
-    newsLetterr.addEventListener('submit', (e) => {
+    // adding the submit event listener to subscribe to our newsletter form
+    newsLetterr.addEventListener('submit', (e) => {  
         e.preventDefault()
         const username = document.getElementById('formname').value
         console.log(username)
@@ -211,7 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailAddress = document.getElementById('email').value
         console.log(emailAddress)
     })
-
-
 
 }) 
