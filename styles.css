@@ -1,6 +1,6 @@
 body {
     background-image: url('theatre26.jpg');
-    color: #000;
+    color: black;
 }
 
 h1 {
@@ -38,6 +38,7 @@ body h3 {
 
 #introduction p {
     font-size: larger;
+
 }
 
 #recipes h2 {
@@ -46,6 +47,9 @@ body h3 {
 
 #recipes p {
     font-size: larger;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
 }
 
 #recipes img {
@@ -57,15 +61,13 @@ body h3 {
     
 }
 
-#recipes p {
-    display: flex;
-    flex-flow: wrap;
-    flex-direction: row;
-    
-}
-
 #recipedetail {
     list-style: none;
+}
+
+#recipeingredient li {
+    list-style: none;
+    
 }
 
 #socialmediaicons {
@@ -91,5 +93,18 @@ body h3 {
     margin: 5px;
     padding: 15px;
 
+}
+
+#ingredients {
+    list-style: none;
+    padding: 15px;
+    font-size: large;
+    
+}
+
+#measurements {
+    list-style: none;
+    padding: 15px;
+    font-size: large;
 }
 
